@@ -1,1 +1,1 @@
-# HastanYonetim_RandevuSistem
+# Hastane Yonetim Sistem
