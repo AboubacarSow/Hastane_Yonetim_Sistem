@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1BD8111-8E40-4711-B6F1-CAF5D619B913}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HastanYonetim_RandevuSistem</RootNamespace>
+    <AssemblyName>HastanYonetim_RandevuSistem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.9.0.0-rc.2.24473.5\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=112.1.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.112.1.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SipaaFramework, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\SipaaFramework.1.1.0\lib\net46\SipaaFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.CodeDom.9.0.0-rc.2.24473.5\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.9.0.0-rc.2.24473.5\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.9.0.0-rc.2.24473.5\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.9.0.0-rc.2.24473.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="conn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>conn.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Doktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Doktor.Designer.cs">
+      <DependentUpon>Doktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoktorGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DoktorGiris.Designer.cs">
+      <DependentUpon>DoktorGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DoktorKayitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DoktorKayitForm.Designer.cs">
+      <DependentUpon>DoktorKayitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sekreter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sekreter.Designer.cs">
+      <DependentUpon>Sekreter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SekreterGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SekreterGiris.Designer.cs">
+      <DependentUpon>SekreterGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneYonetimDbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneYonetimDbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneYonetimDbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneYonetimDbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneYonetimDbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneYonetimDbDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneYonetimDbDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneYonetimDbDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneYonetimDbDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneYonetimDbDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneYonetimDbDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneYonetimDbDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BransDto.cs" />
+    <Compile Include="Models\DoktorDto.cs" />
+    <Compile Include="Models\HastaDto.cs" />
+    <Compile Include="Models\RandevuDto.cs" />
+    <Compile Include="Models\SqlConnecteur.cs" />
+    <Compile Include="UserControls\AktifRandevu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\AktifRandevu.Designer.cs">
+      <DependentUpon>AktifRandevu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BilgiDuzenle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\BilgiDuzenle.Designer.cs">
+      <DependentUpon>BilgiDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Bilgilerim.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Bilgilerim.Designer.cs">
+      <DependentUpon>Bilgilerim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HastaGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HastaGiris.Designer.cs">
+      <DependentUpon>HastaGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DoktorBilgiDuzenle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DoktorBilgiDuzenle.Designer.cs">
+      <DependentUpon>DoktorBilgiDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DoktorBilgileri.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DoktorBilgileri.Designer.cs">
+      <DependentUpon>DoktorBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DoktorDuyurular.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DoktorDuyurular.Designer.cs">
+      <DependentUpon>DoktorDuyurular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DoktorRandevuDetaylarcs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DoktorRandevuDetaylarcs.Designer.cs">
+      <DependentUpon>DoktorRandevuDetaylarcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GesmisRandevu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GesmisRandevu.Designer.cs">
+      <DependentUpon>GesmisRandevu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Hasta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Hasta.Designer.cs">
+      <DependentUpon>Hasta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HastaKayitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HastaKayitForm.Designer.cs">
+      <DependentUpon>HastaKayitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Randevu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Randevu.Designer.cs">
+      <DependentUpon>Randevu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RandevuAlma.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RandevuAlma.Designer.cs">
+      <DependentUpon>RandevuAlma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneYonetimDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneYonetimDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Doktor.resx">
+      <DependentUpon>Doktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoktorGiris.resx">
+      <DependentUpon>DoktorGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DoktorKayitForm.resx">
+      <DependentUpon>DoktorKayitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sekreter.resx">
+      <DependentUpon>Sekreter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SekreterGiris.resx">
+      <DependentUpon>SekreterGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\AktifRandevu.resx">
+      <DependentUpon>AktifRandevu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\BilgiDuzenle.resx">
+      <DependentUpon>BilgiDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Bilgilerim.resx">
+      <DependentUpon>Bilgilerim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HastaGiris.resx">
+      <DependentUpon>HastaGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DoktorBilgiDuzenle.resx">
+      <DependentUpon>DoktorBilgiDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DoktorBilgileri.resx">
+      <DependentUpon>DoktorBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DoktorDuyurular.resx">
+      <DependentUpon>DoktorDuyurular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DoktorRandevuDetaylarcs.resx">
+      <DependentUpon>DoktorRandevuDetaylarcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GesmisRandevu.resx">
+      <DependentUpon>GesmisRandevu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Hasta.resx">
+      <DependentUpon>Hasta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HastaKayitForm.resx">
+      <DependentUpon>HastaKayitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Randevu.resx">
+      <DependentUpon>Randevu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RandevuAlma.resx">
+      <DependentUpon>RandevuAlma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="conn.xsc">
+      <DependentUpon>conn.xsd</DependentUpon>
+    </None>
+    <None Include="conn.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>conn.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="conn.xss">
+      <DependentUpon>conn.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet.xsc">
+      <DependentUpon>HastaneYonetimDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneYonetimDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneYonetimDbDataSet.xss">
+      <DependentUpon>HastaneYonetimDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet1.xsc">
+      <DependentUpon>HastaneYonetimDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneYonetimDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneYonetimDbDataSet1.xss">
+      <DependentUpon>HastaneYonetimDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet2.xsc">
+      <DependentUpon>HastaneYonetimDbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneYonetimDbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneYonetimDbDataSet2.xss">
+      <DependentUpon>HastaneYonetimDbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet3.xsc">
+      <DependentUpon>HastaneYonetimDbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneYonetimDbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneYonetimDbDataSet3.xss">
+      <DependentUpon>HastaneYonetimDbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet4.xsc">
+      <DependentUpon>HastaneYonetimDbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneYonetimDbDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneYonetimDbDataSet4.xss">
+      <DependentUpon>HastaneYonetimDbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet5.xsc">
+      <DependentUpon>HastaneYonetimDbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneYonetimDbDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneYonetimDbDataSet5.xss">
+      <DependentUpon>HastaneYonetimDbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet6.xsc">
+      <DependentUpon>HastaneYonetimDbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneYonetimDbDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneYonetimDbDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneYonetimDbDataSet6.xss">
+      <DependentUpon>HastaneYonetimDbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secretary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointment-request.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emergency-exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit-door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\to-do-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\randevu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\announcement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\branch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
